@@ -6,7 +6,7 @@ import ManageToolsRow from '../ManageToolsRow/ManageToolsRow';
 
 const ManageTools = () => {
     const [deletingTool, setDeletingTool] = useState(null);
-    const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('http://localhost:5000/tool', {
+    const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('http://boomer-herokuserver.herokuapp.com/tool', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

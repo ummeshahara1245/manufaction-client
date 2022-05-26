@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteUserModal = ({ deletingUser, setDeletingUser, refetch }) => {
     const { user_name, _id, email } = deletingUser;
     const handleDeleteUser = () => {
-        const url = `http://localhost:5000/user/${_id}`;
+        const url = `http://boomer-herokuserver.herokuapp.com/user/${_id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

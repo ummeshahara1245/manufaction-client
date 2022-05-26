@@ -10,7 +10,7 @@ const AllUsers = () => {
     const [user] = useAuthState(auth);
     const [deletingUser, setDeletingUser] = useState(null);
     const myEmail = user?.email;
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://boomer-herokuserver.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

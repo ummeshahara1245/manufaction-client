@@ -5,7 +5,7 @@ const AllUserRow = ({ user, refetch, myEmail, setDeletingUser }) => {
     const { email, role } = user;
     console.log(myEmail)
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`http://boomer-herokuserver.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -25,7 +25,7 @@ const AllUserRow = ({ user, refetch, myEmail, setDeletingUser }) => {
             })
     }
     const makeUser = () => {
-        fetch(`http://localhost:5000/users/admin/${email}`, {
+        fetch(`http://boomer-herokuserver.herokuapp.com/users/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

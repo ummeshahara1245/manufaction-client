@@ -11,7 +11,7 @@ const useToken = user => {
             photo: photo,
         };
         if (email) {
-            fetch(`http://localhost:5000/user/${email}`, {
+            fetch(`http://boomer-herokuserver.herokuapp.com/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

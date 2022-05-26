@@ -5,7 +5,7 @@ import Loading from '../../Shared/Loading/Loading';
 
 const AllOrders = () => {
     const [deletingOrder, setDeletingOrder] = useState();
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch('http://localhost:5000/orders', {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch('http://boomer-herokuserver.herokuapp.com/orders', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

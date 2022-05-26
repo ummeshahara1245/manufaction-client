@@ -11,7 +11,7 @@ const Purchase = () => {
     const [quantity, setQuantity] = useState(minQuantity);
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/tool/${id}`)
+        fetch(`http://boomer-herokuserver.herokuapp.com/tool/${id}`)
             .then(res => res.json())
             .then(data => setTool(data))
     }, [id])
@@ -33,7 +33,7 @@ const Purchase = () => {
             tool_name: tool.name,
 
         }
-        fetch("http://localhost:5000/order", {
+        fetch("http://boomer-herokuserver.herokuapp.com/order", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

@@ -29,7 +29,7 @@ const AddTool = () => {
                         image: img,
                     }
                     // send to your database 
-                    fetch('http://localhost:5000/tool', {
+                    fetch('http://boomer-herokuserver.herokuapp.com/tool', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

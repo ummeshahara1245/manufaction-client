@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteToolModal = ({ deletingTool, refetch, setDeletingTool }) => {
     const { name, _id } = deletingTool;
     const handleDelete = () => {
-        const url = `http://localhost:5000/tool/${_id}`;
+        const url = `http://boomer-herokuserver.herokuapp.com/tool/${_id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {
